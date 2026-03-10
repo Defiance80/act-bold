@@ -65,7 +65,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
       {mobileOpen && <div className="fixed inset-0 bg-black/50 z-30 lg:hidden" onClick={() => setMobileOpen(false)} />}
 
       {/* Main */}
-      <div className="flex-1 lg:ml-64">
+      <div className="flex-1 lg:ml-64 min-w-0 overflow-x-hidden">
         <header className="sticky top-0 z-20 bg-white/80 backdrop-blur border-b border-slate-200 px-6 py-3 flex items-center justify-between">
           <button className="lg:hidden p-1" onClick={() => setMobileOpen(!mobileOpen)}>
             {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -75,7 +75,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
             <LogOut className="w-4 h-4" />Logout
           </button>
         </header>
-        <main className="p-6 lg:p-8 max-w-7xl">{children}</main>
+        <main className="p-4 sm:p-6 lg:p-8 max-w-7xl overflow-x-hidden">{children}</main>
       </div>
     </div>
   );

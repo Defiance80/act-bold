@@ -54,12 +54,12 @@ export default function NorthstarPage() {
       {/* Progress */}
       <div className="bg-white rounded-xl border border-slate-200 p-6">
         <h2 className="font-semibold mb-3">Project Progress</h2>
-        <div className="flex items-center gap-4 mb-2">
+        <div className="flex items-center gap-2 sm:gap-4 mb-2 overflow-x-auto no-scrollbar">
           {["Discovery", "Design", "Development", "QA", "Launch"].map((phase, i) => (
-            <div key={phase} className="flex items-center gap-2">
+            <div key={phase} className="flex items-center gap-1.5 sm:gap-2 shrink-0">
               <div className={`w-3 h-3 rounded-full ${i <= 2 ? "bg-indigo-500" : "bg-slate-200"}`} />
-              <span className={`text-xs ${i <= 2 ? "text-indigo-600 font-medium" : "text-slate-400"}`}>{phase}</span>
-              {i < 4 && <div className={`w-8 h-0.5 ${i < 2 ? "bg-indigo-500" : "bg-slate-200"}`} />}
+              <span className={`text-[11px] sm:text-xs ${i <= 2 ? "text-indigo-600 font-medium" : "text-slate-400"}`}>{phase}</span>
+              {i < 4 && <div className={`w-4 sm:w-8 h-0.5 ${i < 2 ? "bg-indigo-500" : "bg-slate-200"}`} />}
             </div>
           ))}
         </div>

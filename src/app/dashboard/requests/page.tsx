@@ -25,7 +25,7 @@ export default function RequestsPage() {
       </div>
 
       {/* Status Summary */}
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-3">
         {[
           { label: "Needs Clarification", count: 3, color: "bg-amber-50 border-amber-100 text-amber-700" },
           { label: "Ready for Dev", count: 3, color: "bg-emerald-50 border-emerald-100 text-emerald-700" },
@@ -40,7 +40,7 @@ export default function RequestsPage() {
       </div>
 
       {/* Request Cards */}
-      <div className="grid md:grid-cols-2 gap-4">
+      <div className="grid sm:grid-cols-2 gap-3 sm:gap-4">
         {requests.map((r, i) => (
           <div key={i} className="bg-white rounded-xl border border-slate-200 p-5 hover:shadow-sm transition">
             <div className="flex items-start justify-between mb-3">

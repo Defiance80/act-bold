@@ -49,7 +49,7 @@ export default function DashboardPage() {
       </div>
 
       {/* KPIs */}
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
         {kpis.map(k => (
           <div key={k.label} className={`bg-white rounded-xl border ${k.border} p-5`}>
             <div className={`w-10 h-10 rounded-lg ${k.color} flex items-center justify-center mb-3`}>

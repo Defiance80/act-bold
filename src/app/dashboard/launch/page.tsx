@@ -92,7 +92,7 @@ export default function LaunchPage() {
               <div className="w-full h-2 bg-slate-100 rounded-full overflow-hidden mb-4">
                 <div className={`h-full rounded-full ${pct >= 75 ? "bg-emerald-500" : pct >= 50 ? "bg-amber-500" : "bg-rose-500"}`} style={{ width: `${pct}%` }} />
               </div>
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
                 {p.items.map((item, i) => (
                   <div key={i} className={`flex items-center gap-2.5 p-3 rounded-lg ${item.done ? "bg-emerald-50" : "bg-slate-50"}`}>
                     {item.done ? <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" /> : <Circle className="w-4 h-4 text-slate-300 shrink-0" />}
